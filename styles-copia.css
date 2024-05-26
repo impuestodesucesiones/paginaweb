@@ -68,11 +68,15 @@ footer {
 
 
 
+.list {
+  list-style: none;
+  padding: 0;
+}
 
-
-
-
-
+.list li:before {
+  content: "•";
+  margin-right: 5px;
+}
 
 
 
