@@ -1,18 +1,22 @@
-<?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST['name'];
-    $email = $_POST['email'];
-    $message = $_POST['message'];
+<? php
+$name = $_POST['name'];
+$mail =$_POST['email'];
+$message = $_POST['message'];
 
-    $to = 'impuestodesucesionesonline@gmail.com'; // Cambia esto por tu dirección de correo electrónico
-    $subject = 'Nuevo mensaje del formulario de contacto';
-    $body = "Nombre: $name\nCorreo electrónico: $email\nMensaje: $message";
+$header = 'From: ' . $email . " \r\n";
+$header
+$header .= "Mime-Version: 1.0 \r\n";
+$header .= "Content-Type: text/plain";
 
-    // Utiliza la función mail() para enviar el correo electrónico
-    if (mail($to, $subject, $body)) {
-        header("Location: contacto.html"); 
-    } else {
-        echo 'Hubo un error al enviar el mensaje.';
-    }
-}
+$message = "Este mensaje fue enviado por: ". $name . " \r\n";
+$message .= "Su e-mail es: " . $email . "\r\n";
+$message .= "Mensaje: " . $_POST['message'] . " \r\n";
+$message .= "Enviado el: ". date('d/m/Y', time());
+
+$para = 'impuestodesucesionesonline@gmail.com';
+$asunto = 'Asunto del mensaje';
+
+mail($para, $asunto, utf8_decode($message), $header);
+
+header("Location:index.html");
 ?>
