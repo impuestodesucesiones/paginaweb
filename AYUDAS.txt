@@ -1,0 +1,44 @@
+*PARA TENER IMAGEN EN EL FONDO*
+
+<head>
+<title>Página con imagen de fondo</title>
+<link rel="stylesheet" type="text/css" href="img1.css">
+</head>
+
+*METER IMAGEN*
+<img src="dinosaur.jpg" />
+
+
+
+    <div class="col-lg-6 mb-5 mb-lg-0">
+        <div class="contact-form" style="text-align:center">
+            <div id="success"></div>
+            <form name="sentMessage" id="contactForm" novalidate="novalidate">
+                <div class="form-group">
+                    <input type="text" class="form-control p-4" id="name" placeholder="NOMBRE" required="required" data-validation-required-message="Nombre completo" />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                    <input type="email" class="form-control p-4" id="email" placeholder="EMAIL" required="required" data-validation-required-message="Correo electrónico" />
+                    <p class="help-block text-danger"></p>
+                </div>
+
+  		<div class="form-group">
+                    <input type="text" class="form-control p-4" id="phone" placeholder="TELEFONO" required="required" data-validation-required-message="Teléfono" />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                    <input type="text" class="form-control p-4" id="subject" placeholder="ASUNTO" required="required" data-validation-required-message="Indique el tema de su consulta" />
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                    <textarea class="form-control p-4" rows="6" id="message" placeholder="MENSAJE" required="required" data-validation-required-message="Escriba su consulta"></textarea>
+                    <p class="help-block text-danger"></p>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary btn-block" type="submit" id="sendMessageButton">Enviar Mensaje</button>
+                </div>
+
+	<script src="mail/jqBootstrapValidation.min.js"></script>
+    	<script src="mail/contact.js"></script>
+    </div>
